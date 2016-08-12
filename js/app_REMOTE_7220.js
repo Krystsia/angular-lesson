@@ -1,6 +1,5 @@
 (function () {
 	"use strict";
-
 	var application = angular.module("angular-lessons", []);
 	application.value('model', {
 		user: "Kirill",
