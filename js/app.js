@@ -1,5 +1,9 @@
 (function() {
 	"use strict";
 	
-	 angular.module("angular-lessons", []);
+	 var mainModul = angular.module("angular-lessons", []);
+    mainModul.value('firstModule', {
+      name: 'Kiril',
+      surname: 'Krystsia'
+    })
 })();
