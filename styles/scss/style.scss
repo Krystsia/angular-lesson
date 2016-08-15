@@ -1,6 +1,29 @@
+@mixin warning {
+  color:#9b1414;
+  font-size: 16px;
+}
 $green: #7F993A;
+$lime: transparentize($green, .8);
+$red: #f7b1b1;
 $body-background: $green;
-
+$badge-background: #9a3030;
+$badge-color: #fafafa;
 body {
 	background: $green;
+}
+
+.red {
+  background: $red;
+}
+
+.lime {
+  background: $lime;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.warning {
+  @include warning;
 }

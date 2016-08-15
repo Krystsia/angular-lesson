@@ -1,2 +1,15 @@
 body {
   background: #7F993A; }
+
+.red {
+  background: #f7b1b1; }
+
+.lime {
+  background: rgba(127, 153, 58, 0.2); }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.warning {
+  color: #9b1414;
+  font-size: 16px; }
