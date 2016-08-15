@@ -1,15 +1,50 @@
-@mixin warning {
-  color:#9b1414;
-  font-size: 16px;
-}
+@import "../../bower_components/foundation/scss/foundation";
+
+
+//colors
+
 $green: #7F993A;
+$dark-blue: #1A9CB0;
+$white: #fff;
+$gray: #999;
+$blue:  #39C2D7;
+$plume: #8E244D;
+$warning: $plume;
 $lime: transparentize($green, .8);
 $red: #f7b1b1;
-$body-background: $green;
+$body-background: $gray;
 $badge-background: #9a3030;
-$badge-color: #fafafa;
+
+//font-size
+
+
+
+
 body {
-	background: $green;
+	padding-top: 30px;
+	background: $body-background;
+	
+	> header {
+		background: $blue !important;
+		margin-bottom: 12px !important;
+		display: flex;
+		align-items: center;
+		
+		h1 {
+			color: $white;
+		}
+		
+		.label-container {
+			text-align: right;
+			color: $white;
+		}
+	}
+	
+	> .container {
+		background: $white;
+		@include grid-row;
+	} 
+	
 }
 
 .red {
@@ -24,6 +59,17 @@ body {
   display: none !important;
 }
 
-.warning {
-  @include warning;
+
+table {
+	width: 100%;
+	@include table;
+}
+
+button {
+	@include  button-style($bg:$dark-blue, $radius: 5px, $disabled: true, $bg-hover:null, $border-color:null);
+}
+
+*:disabled {
+	opacity: .5 !important;
+	cursor: not-allowed !important;
 }
