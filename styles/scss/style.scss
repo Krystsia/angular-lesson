@@ -1,31 +1,13 @@
 @import "../../bower_components/foundation-sites/scss/foundation";
-
-
-//colors
-
-$green: #7F993A;
-$dark-blue: #1A9CB0;
-$white: #fff;
-$gray: #999;
-$blue:  #39C2D7;
-$plume: #8E244D;
-$warning: $plume;
-$lime: transparentize($green, .8);
-$red: #f7b1b1;
-$body-background: $gray;
-$badge-background: #9a3030;
-
-//font-size
-
-
-
+@import "variables";
+@import "global";
 
 body {
 	padding-top: 30px;
 	background: $body-background;
 	
 	> header {
-		background: $blue !important;
+		background: $blue;
 		margin-bottom: 12px !important;
 		display: flex;
 		align-items: center;
@@ -53,7 +35,7 @@ body {
 }
 
 .lime {
-  background: $lime;
+  background: $lime-green;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -75,3 +57,5 @@ table {
 .done {
     text-decoration: line-through;
 }
+
+

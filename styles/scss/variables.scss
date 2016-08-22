@@ -1,15 +1,30 @@
-$green: #7F993A;
-$dark-blue: #1A9CB0;
 $white: #fff;
-$gray: #999;
+
+$lime-green: #A3C644; 
+$dark-green: #7F993A;
+
 $blue:  #39C2D7;
+$dark-blue: #1A9CB0;
+
+$gray_dark:  #464547;
+$gray: #999;
+$gray_medium: #666;
+$gray_light: #CCC;
+
+$raspberry: #B22746; 
 $plume: #8E244D;
+
+$error: $raspberry;
 $warning: $plume;
-$lime: transparentize($green, .8);
+
 $red: #f7b1b1;
-$body-background: $gray;
+$body-background: $gray-dark;
 $badge-background: #9a3030;
 
 
 
 $table-border: 1px solid $gray;
+
+@function lines($lines) {
+	@return $lines * 18px;
+}

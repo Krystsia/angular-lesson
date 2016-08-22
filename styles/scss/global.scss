@@ -1,6 +1,6 @@
 main {
     @include flex-grid-row(
-        $columns: 12,
+        $columns: 12
     );
     
     header {
@@ -9,11 +9,31 @@ main {
         
 }
 
-
 body {
   padding-top: 30px;
 }
 
 h1 {
   color: $white;
+}
+
+
+.warning-color {
+	&, & td {
+		background: $warning;
+		color: $white;
+	}
+	
+}
+.done-color {
+	&, & td  {
+		background: $lime-green;
+		color: $white;
+	}
+}
+
+
+input[type^="che"] {
+	$form-spacing: lines(1) !global;
+	@include foundation-form-checkbox;
 }

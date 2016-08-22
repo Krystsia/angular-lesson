@@ -4,11 +4,64 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+main {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap; }
+  main header {
+    flex: 0 0 100%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    max-width: 100%; }
+    @media screen and (min-width: 40em) {
+      main header {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+
+body {
+  padding-top: 30px; }
+
+h1 {
+  color: #fff; }
+
+.warning-color, .warning-color td {
+  background: #8E244D;
+  color: #fff; }
+
+.done-color, .done-color td {
+  background: #A3C644;
+  color: #fff; }
+
+input[type^="che"] [type='file'],
+input[type^="che"] [type='checkbox'],
+input[type^="che"] [type='radio'] {
+  margin: 0 0 18px; }
+
+input[type^="che"] [type='checkbox'] + label,
+input[type^="che"] [type='radio'] + label {
+  display: inline-block;
+  margin-left: 9px;
+  margin-right: 18px;
+  margin-bottom: 0;
+  vertical-align: baseline; }
+  input[type^="che"] [type='checkbox'] + label[for],
+  input[type^="che"] [type='radio'] + label[for] {
+    cursor: pointer; }
+
+input[type^="che"] label > [type='checkbox'],
+input[type^="che"] label > [type='radio'] {
+  margin-right: 9px; }
+
+input[type^="che"] [type='file'] {
+  width: 100%; }
+
 body {
   padding-top: 30px;
-  background: #999; }
+  background: #464547; }
   body > header {
-    background: #39C2D7 !important;
+    background: #39C2D7;
     margin-bottom: 12px !important;
     display: flex;
     align-items: center; }
@@ -33,7 +86,7 @@ body {
   background: #f7b1b1; }
 
 .lime {
-  background: rgba(127, 153, 58, 0.2); }
+  background: #A3C644; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
