@@ -1,0 +1,19 @@
+main {
+    @include flex-grid-row(
+        $columns: 12,
+    );
+    
+    header {
+        @include flex-grid-column(12);
+    }
+        
+}
+
+
+body {
+  padding-top: 30px;
+}
+
+h1 {
+  color: $white;
+}

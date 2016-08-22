@@ -23,17 +23,15 @@
 		$scope.incompleteCount = incompleteCount;
 		$scope.warningLevel = warningLevel;
 		$scope.addNewItem = addNewItem;
+        $scope.showComplete = true;
 	  
 	//	IMP
 	  
-	  
-		
-		
 
-		function incompleteCount(items) {
+		function incompleteCount(collection) {
 			var count = 0;
 
-			angular.forEach(items, function(item) {
+			angular.forEach(collection, function(item) {
 			  if(!item.done) count++;
 			});
 			
@@ -57,5 +55,18 @@
 				newItem.action = "";
 			}
 		}
-	})
+	});
+    
+    application.filter('checkedItems', checkedItems);
+    function checkedItems() {
+        return function(items, showComplete){
+        var result = [];
+        
+            angular.forEach(items, function(item) {
+                if(item.done || showComplete) result.push(item);
+            })
+                      
+        return result;
+        }
+    }
 })();

@@ -1,4 +1,4 @@
-@import "../../bower_components/foundation/scss/foundation";
+@import "../../bower_components/foundation-sites/scss/foundation";
 
 
 //colors
@@ -41,6 +41,7 @@ body {
 	}
 	
 	> .container {
+        padding-top: 30px;
 		background: $white;
 		@include grid-row;
 	} 
@@ -62,14 +63,15 @@ body {
 
 table {
 	width: 100%;
-	@include table;
 }
 
-button {
-	@include  button-style($bg:$dark-blue, $radius: 5px, $disabled: true, $bg-hover:null, $border-color:null);
-}
+
 
 *:disabled {
 	opacity: .5 !important;
 	cursor: not-allowed !important;
+}
+
+.done {
+    text-decoration: line-through;
 }
