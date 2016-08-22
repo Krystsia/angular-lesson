@@ -6,8 +6,7 @@ body {
 	padding-top: 30px;
 	background: $body-background;
 	
-	> header {
-		background: $blue;
+	 header {
 		margin-bottom: 12px !important;
 		display: flex;
 		align-items: center;
@@ -56,6 +55,16 @@ table {
 
 .done {
     text-decoration: line-through;
+}
+
+.photo {
+    margin-right: lines(1);
+    height: lines(3);
+    width: lines(3);
+    background: $white;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    
 }
 
 

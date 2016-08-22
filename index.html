@@ -9,59 +9,16 @@
 </head>
 
 <body data-ng-controller="myData" data-ng-cloak>
-	<header class="row">
-		<h1 class="columns small-6">{{::myData.user}}'s to-do List 
-		</h1>
-		<div class="columns small-6 label-container"
-			 data-ng-if="incompleteCount(myData.items)">
-		Remaining notes: 
-			<span class="text-right label round " 
-				data-ng-class="warningLevel(myData.items)">{{incompleteCount(myData.items)}}
-			</span>
-		</div>
-	</header>
+	<main-header></main-header>
 	<div class="container">
 		<div class="row">
 			<div class="large-6 medium-8 small-12 columns">
-			    <div class="input-group">
-                    <span class="input-group-label">Add Description</span>
-                    <input type="text" 
-                         id="addDescription" 
-                         ng-model="newItem.action"
-                         class="input-group-field">
-                    <div class="input-group-button">
-                        <input type="submit" 
-                               ng-disabled="!newItem.action"
-                               data-ng-click="addNewItem(myData.items, newItem)"
-                               class="button"
-                               value="Add">
-                    </div>
-			    </div>
+			    <div class="input-group" task-form></div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="small-12 columns">
-				<table>
-					<thead>
-						<tr>
-							<th width="100">Checked</th>
-							<th>Description</th>
-							<th>Done</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr data-ng-repeat="item in myData.items | checkedItems: showComplete | orderBy: 'action'"
-							data-ng-class="{'done-color' : item.done}">
-							<td>
-								<input type="checkbox" ng-model="item.done" >
-							</td>
-							<td data-ng-bind="item.action"
-							    ng-class="{'done': item.done}">
-				            </td>
-							<td  data-ng-bind="item.done ? 'Yes' : 'No'"></td>
-						</tr>
-					</tbody>
-				</table>
+				<task-list></task-list>
 			</div>
 		</div>
 		<div class="row">

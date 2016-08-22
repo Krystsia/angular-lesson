@@ -60,14 +60,13 @@ input[type^="che"] [type='file'] {
 body {
   padding-top: 30px;
   background: #464547; }
-  body > header {
-    background: #39C2D7;
+  body header {
     margin-bottom: 12px !important;
     display: flex;
     align-items: center; }
-    body > header h1 {
+    body header h1 {
       color: #fff; }
-    body > header .label-container {
+    body header .label-container {
       text-align: right;
       color: #fff; }
   body > .container {
@@ -100,3 +99,11 @@ table {
 
 .done {
   text-decoration: line-through; }
+
+.photo {
+  margin-right: 18px;
+  height: 54px;
+  width: 54px;
+  background: #fff;
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%); }

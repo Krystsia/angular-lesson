@@ -5,7 +5,7 @@
 	var application = angular.module("angular-lessons", []);
 	application.value('model', {
 	  user: "Kirill",
-	  userPhoto: ''
+	  userPhoto: 'images/Hipstory00.jpg'
 	});
   
 	application.controller("myData", function($scope, model) {
@@ -16,8 +16,12 @@
         $scope.showComplete = true;
 	});
 	
-	application.run(runApp);
     application.filter('checkedItems', checkedItems);
+    application.directive('taskList', taskList);
+    application.directive('mainHeader', mainHeader);
+    application.directive('taskForm', taskForm);
+    application.run(runApp);
+    
 	
 	function incompleteCount(collection) {
 		var count = 0;
@@ -61,10 +65,31 @@
 	
 	function runApp($http, model) {
 		$http
-			 .get("main.json")
+			 .get('../js/main.json')
 			 .then(function(response) {
 			model.items = response.data;
 		});
 	}
+    
+    function taskList() {
+        return {
+            restrict: "E",
+            templateUrl: "table.html"
+        }
+    }
+    
+    function mainHeader() {
+        return {
+            restrict: "E",
+            templateUrl: "header.html"
+        }
+    }
+    
+    function taskForm() {
+        return {
+            restrict: "A",
+            templateUrl: "form.html"
+        }
+    }
 	
 })();

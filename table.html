@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th width="100">Checked</th>
+            <th>Description</th>
+            <th>Done</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="item in myData.items | checkedItems: showComplete | orderBy: 'action'" data-ng-class="{'done-color' : item.done}">
+            <td>
+                <input type="checkbox" ng-model="item.done">
+            </td>
+            <td data-ng-bind="item.action" ng-class="{'done': item.done}">
+            </td>
+            <td data-ng-bind="item.done ? 'Yes' : 'No'"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,9 @@
+<header class="row">
+    <h1 class="columns small-6"><img ng-src="{{::myData.userPhoto}}" class="photo badge"></span>{{::myData.user}}'s to-do List 
+		</h1>
+    <div class="columns small-6 label-container" data-ng-if="incompleteCount(myData.items)">
+        Remaining notes:
+        <span class="text-right label round " data-ng-class="warningLevel(myData.items)">{{incompleteCount(myData.items)}}
+			</span>
+    </div>
+</header>
