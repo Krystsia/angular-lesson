@@ -69,6 +69,11 @@
 			 .then(function(response) {
 			model.items = response.data;
 		});
+        $http
+            .get('../js/todo.json')
+            .then(function(response) {
+            model.days = response.data.days;
+        });
 	}
     
     function taskList() {

@@ -67,4 +67,15 @@ table {
     
 }
 
+.today {
+    
+    font-size: 12px;
+    color: $gray_dark;
+    
+    span {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
 

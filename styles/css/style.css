@@ -107,3 +107,10 @@ table {
   background: #fff;
   filter: grayscale(50%);
   -webkit-filter: grayscale(50%); }
+
+.today {
+  font-size: 12px;
+  color: #464547; }
+  .today span {
+    font-size: 14px;
+    text-transform: uppercase; }
