@@ -4,16 +4,20 @@
     angular.module("angular-lessons").
     directive("hightlight", hightLight);
     
-    function hightLight() {
+    function hightLight($filter) {
+        var dayFilter = $filter("dayName");
+        
         return {
             restrict: "A",
             link: funcHightLighting
         }
-    }
-    
-    function funcHightLighting(scope, element, attr) {
-        if(scope.today === "Thursday") {
-            element.css("color", "red");
+        
+        function funcHightLighting(scope, element, attr) {
+            if(dayFilter(scope.today) === "Friday") {
+                element.css("color", "red");
+            }
         }
     }
+    
+    
 })()
