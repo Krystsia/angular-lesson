@@ -8,7 +8,7 @@
 	  userPhoto: 'images/Hipstory00.jpg'
 	});
   
-	application.controller("myData", function($scope, model) {
+	application.controller("myData", function($scope, model, getDay) {
 		$scope.myData = model;
 		$scope.incompleteCount = incompleteCount;
 		$scope.warningLevel = warningLevel;
@@ -72,7 +72,7 @@
         $http
             .get('../js/todo.json')
             .then(function(response) {
-            model.days = response.data.days;
+            model.days = response.data[0].days;
         });
 	}
     
