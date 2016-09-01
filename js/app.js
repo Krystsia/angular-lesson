@@ -2,7 +2,7 @@
   
 	"use strict";
 
-	var application = angular.module("angular-lessons", []);
+	var application = angular.module("angular-lessons", ["services"]);
 	application.value('model', {
 	  user: "Kirill",
 	  userPhoto: 'images/Hipstory00.jpg'
@@ -15,6 +15,12 @@
 		$scope.addNewItem = addNewItem;
         $scope.showComplete = true;
 	});
+    
+    application.controller("name", name);
+    
+    function name(addName) {
+       console.log(addName);
+    }
 	
     application.filter('checkedItems', checkedItems);
     application.directive('taskList', taskList);
@@ -98,3 +104,5 @@
     }
 	
 })();
+
+

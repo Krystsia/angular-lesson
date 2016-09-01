@@ -1,4 +1,4 @@
-<header class="row">
+<header class="row" ng-controller="name">
     <h1 class="columns small-6"><img ng-src="{{::myData.userPhoto}}" class="photo badge"></span>{{::myData.user}}'s to-do List 
 		</h1>
     <div class="columns small-6 label-container" data-ng-if="incompleteCount(myData.items)">
