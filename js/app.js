@@ -16,11 +16,6 @@
         $scope.showComplete = true;
 	});
     
-    application.controller("name", name);
-    
-    function name(addName) {
-       console.log(addName);
-    }
 	
     application.filter('checkedItems', checkedItems);
     application.directive('taskList', taskList);

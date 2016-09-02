@@ -1,9 +1,19 @@
 <header class="row" ng-controller="name">
-    <h1 class="columns small-6"><img ng-src="{{::myData.userPhoto}}" class="photo badge"></span>{{::myData.user}}'s to-do List 
-		</h1>
-    <div class="columns small-6 label-container" data-ng-if="incompleteCount(myData.items)">
+    <h1 class="columns small-5"><img ng-src="{{::myData.userPhoto}}" class="photo badge"></span>{{getName() || "Unknow"}}'s to-do List 
+    </h1>
+    <form action="" class="columns small-4">
+        <div class="input-group">
+           <span class="input-group-label">Add Name</span>
+            <input type="text" ng-model="newName">
+            <div class="input-group-button">
+                <input type="submit" ng-disabled="!newName" data-ng-click="setName(newName)" class="button" value="Add">
+            </div>
+        </div>
+
+    </form>
+    <div class="columns small-3 label-container" data-ng-if="incompleteCount(myData.items)">
         Remaining notes:
         <span class="text-right label round " data-ng-class="warningLevel(myData.items)">{{incompleteCount(myData.items)}}
-			</span>
+        </span>
     </div>
 </header>

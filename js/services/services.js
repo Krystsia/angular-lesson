@@ -11,12 +11,12 @@
         }
         
         function setName(name) {
-            this.name = name;
+            mainName = name;
             return this;
         }
 
         function getName() {
-           return this.name;  
+           return mainName;  
         }
                 
     }
