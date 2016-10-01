@@ -117,3 +117,6 @@ table {
 
 .input-group input {
   margin: 0; }
+
+.red-class {
+  background: red; }
