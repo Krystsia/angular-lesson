@@ -2,7 +2,7 @@
     "use strick"
     
     angular.module("angular-lessons").
-    controller("Day", Day);
+    controller("day", day);
     
     function Day($scope, days) {
         $scope.today = days.today;

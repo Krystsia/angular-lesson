@@ -8,7 +8,7 @@
 	  userPhoto: 'images/Hipstory00.jpg'
 	});
   
-	application.controller("myData", function($scope, model, getDay) {
+	application.controller("myData", function($scope, model) {
 		$scope.myData = model;
 		$scope.incompleteCount = incompleteCount;
 		$scope.warningLevel = warningLevel;
@@ -32,7 +32,6 @@
 
 		return count;
 	}
-		
 
 	function warningLevel(items) {
 		return incompleteCount(items) < 3 
@@ -65,15 +64,10 @@
 	
 	function runApp($http, model) {
 		$http
-			 .get('../js/main.json')
-			 .then(function(response) {
+			.get('../js/main.json')
+			.then(function(response) {
 			model.items = response.data;
 		});
-        $http
-            .get('../js/todo.json')
-            .then(function(response) {
-            model.days = response.data[0].days;
-        });
 	}
     
     function taskList() {

@@ -3,7 +3,6 @@
     .filter("dayName", dayName);
     
     function dayName(){
-        
         var days = ["Sunday", "Monday", "Thuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         
         return function(num) {
